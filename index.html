@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<!-- 	<meta name="viewport" content="width=device-width, initial-scale=1"> 等比例滿版
+	@media screen and(max-width:767px) 先寫好在做更改 -->
+	<title>Angela</title>
+	<style>
+		body {
+		  background: linear-gradient(to top right, #8162CE, #F54BA5,#FF88C2);
+		  text-align: center;
+		}
+
+		.color-card{
+			background:linear-gradient(to top right, #FF69B4, #FFF0F5);
+			border-radius:3%;
+			border-style:double;
+			border-width: 9px;
+			border-color: #666;
+		}
+/* 		@media screen and (max-width:767px){
+			.color-card{
+				background:#f00;
+				border-radius:3%;
+				border-style:double;
+				border-width: 9px;
+				border-color: #666;
+			}
+		} */
+		.title{
+			color:#000;
+			font-family:Comic Sans MS;
+			font-weight: bolder;
+		}
+
+		.company-title{
+			color:#003C9D;
+			font-size:20px;
+			font-weight:800;
+			font-family:Trebuchet MS;
+		}
+		.desc{
+			font-size:12px;
+			margin-left: 65px;
+			margin-right: 65px;
+			color:#00008B;
+			text-align:center;
+			font-family: Trebuchet MS;
+			font-weight:400;
+		}
+
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		.i-l{
+		  float:left;
+		  margin-left:20px;
+		  margin-top:20px;
+		}
+
+		.i-r{
+		  float:right;
+		  margin-right:20px;
+		  margin-top:20px;
+		}
+
+		.w{
+		   color:#FF0088;
+		}
+
+		.w:hover{
+		   color:#00BBFF;
+		}
+
+		.y{
+		   color:#FF0088;
+		}
+
+		.y:hover{
+		   color:#000;
+		}
+
+		.z{
+		  color:#FF0088;
+		}
+
+		.z:hover{
+		  color:#DC143C;
+		  font-size: 25px;
+		}
+
+/* 		.b{
+		   color:#2F3B4B;
+		} */
+		hr{
+		  border-color:#7C8097;
+		  width:90%;
+		  margin-top:24px;
+		  margin-bottom:24px;
+		}
+
+		.content{
+		  display:center;
+		}
+
+		.top{
+		  margin-top:16px;
+		}
+		.color-a{
+		  background: linear-gradient(to top right, #C90A6D, #FF48A0);
+		}
+
+		.color-b{
+		  background: linear-gradient(to bottom right, #8162CE, #F54BA5);
+		}
+
+		.color-b:hover{
+		  background:#0066FF;
+		}
+
+		.color-c{
+		  background: linear-gradient(to bottom right, #FF48A0, #3F9EFC);
+		}
+
+		.color-c:hover{
+		background: linear-gradient(to bottom right, #3F9EFC,#990099,#FF8C00,#FF0000);
+		}
+		.color-d{
+		  background: linear-gradient(to bottom right, #6452E9, #F54BA5);
+		}
+		.color-d:hover{
+			background:linear-gradient(to bottom right, #CC0000, #FF8800);
+		}
+		.color-e{
+		  background: linear-gradient(to top right, #3F9EFC, #C90A6D);
+		  color: #000;
+		}
+
+		.color-e:hover{
+		  background:#FF0000;
+		}
+
+		.btn{
+		  border:none;
+		  height:40px;
+		  color:#F5F5F5;
+		  width:35%;
+		  font-size:16px;
+		  border-radius:30px;
+		  box-shadow: 0 13px 26px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.16);
+		}
+		.btn:hover{
+		  border:solid 1px #DA59B1;
+		  height:40px;
+		  color: #4B0082;
+		  background:#FF69B4;
+		  width:35%;
+		  border-color: linear-gradient(to top right, #8162CE, #F54BA5);;
+		  border-radius:30px;
+		  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.16);
+		}
+
+		.circule{
+		  border-radius:50%;
+		  border:none;
+		  height:50px;
+		  width:50px;
+		  color:#ffffff;
+		  box-shadow: 0 13px 26px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.16);
+		  
+		  }
+
+		.container {
+			width:450px;
+			margin: 0 auto;
+			padding: 0px;
+			position: relative;
+		}
+	
+
+		.container:after, .container:before {
+			content: " ";
+			display: table;
+		}
+
+		.container:after {
+			clear: both;
+		}
+
+		.grid-1, .grid-2{
+			float: left ;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		.grid-1 	{width: 75px;}
+		.grid-2		{width: 400px;
+		}
+
+		.card {
+		  border-radius: 6px;
+		  display: inline-block;
+		  height: 667px;
+		  margin: 1rem;
+		  position: relative;
+		  width: 375px;
+		  box-shadow: 0 12px 13px rgba(0,0,0,0.16), 0 12px 13px rgba(0,0,0,0.16);
+		  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+		}
+		.profile {
+		  border-radius:100%;
+		  margin-top:20px;
+		  margin-left:60px;
+		  margin-right:50px;
+		  width:262px;
+		  height:258px;
+		  overflow: hidden;
+		}
+		.p-1{
+		  display: inline-block;
+		  width: 100%;
+/* 		  border-radius:100%;
+		  margin-top:0px;
+		  width:262px;
+		  height:258px; */
+		}
+		.p-2{
+		  display: none;
+		  width: 100%;
+		 /*  border-radius:100%;
+		  margin-top:0px;
+		  width:262px;
+		  height:258px; */
+		}
+		.profile:hover .p-1{
+		  display: none;
+		}
+		.profile:hover .p-2{
+	      display: inline-block;
+		}
+
+
+
+		.center{
+		      display: block;
+		    margin-left: auto;
+		    margin-right: auto
+		}
+
+
+		.element-animation{
+		  animation-name: animationFrames ease 2s;
+		  animation-iteration-count: infinite;
+		  transform-origin: 50% 50%;
+		  animation-fill-mode:forwards;
+		  -webkit-animation: animationFrames ease 2.5s;
+		  -webkit-animation-iteration-count: 1;
+		  -webkit-transform-origin: 50% 50%;
+		  -webkit-animation-fill-mode:forwards;
+		}
+
+
+		@keyframes animationFrames{
+		  0% {
+		    opacity:0;
+		    transform:  translate(-1500px,0px)  ;
+		  }
+		  60% {
+		    opacity:1;
+		    transform:  translate(30px,0px)  ;
+		  }
+		  80% {
+		    transform:  translate(-10px,0px)  ;
+		  }
+		  100% {
+		    opacity:1;
+		    transform:  translate(0px,0px)  ;
+		  }
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="grid-2 element-animation">
+			<div class="color-card">
+				<ul>
+					<li><i class="fas fa-heart i-l z"></i></li>
+					<a href="https://www.kkbox.com/tw/tc/artist/CCI86Q5ZRDaOXWh0F02K808J-index-1.html" target="_blank" ><li><i class="fab fa-kickstarter i-r w"></i></li></a>
+					<a href="https://k007.kiwi6.com/hotlink/2b0cuolf4i/Angela_Zhang_The_Kite_Leads_the_Way_Official_Lyrics_video.mp3" target="_blank"><li><i class="fas fa-headphones i-r y"></i></li></a>
+				</ul>
+				<div class="profile">
+				<img src="https://y.gtimg.cn/music/photo_new/T001R300x300M000002raUWw3PXdkT.jpg?max_age=2592000" alt="rofile-pic" class="p-1">
+				<img src="http://ffyl.ys1.cnliveimg.com/223/img/2020/0103/200103112611425_238.jpg" alt="rofile-pic" class="p-2">
+				</div>
+				<h1 class="title">Angela Zhang</h1>
+				<p class="company-title"> ANG MUSIC</p>
+				<div class="desc top">
+					<p>Singer & Actor & Women's shoe designer</p>
+				</div>
+				<a href="https://zh.wikipedia.org/wiki/%E5%BC%B5%E9%9F%B6%E6%B6%B5"><button class="btn color-a top"> About Me</button></a>
+				<hr>
+				<div class="container">
+					<div class="content">
+						<div class="grid-1">
+						<a href="https://www.facebook.com/Angela.ChangShaoHan" target="_blank" ><button class="color-b circule"> <i class="fab fa-facebook fa-3x"></i> </button></a>
+						<h4 class="title">564.9k</h4>
+						</div>
+						<div class="grid-1">
+						<a href="https://www.instagram.com/angela_zhangshaohan/" target="_blank" ><button class="color-c circule"><i class="fab fa-instagram fa-3x"></i></button></a>
+						<h4 class="title">200k</h4>
+						</div>
+						<div class="grid-1">
+						<a href="https://www.weibo.com/zhangshaohan" target="_blank" ><button class="color-d circule"><i class="fab fa-weibo fa-3x"></i></button></a>
+						<h4 class="title">18785.5k</h4>
+						</div>
+						<div class="grid-1">
+						<a href="https://www.youtube.com/channel/UC5Lksw1oqe_AdKcO9MELoJA" target="_blank" ><button class="color-e circule"><i class="fab fa-youtube fa-3x"></i></button></a>
+						<h4 class="title">116k</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="https://kit.fontawesome.com/37e4521268.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
